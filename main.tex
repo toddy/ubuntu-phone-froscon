@@ -30,10 +30,206 @@
   \tableofcontents
 \end{frame}
 
-\section{Ende}
+\section{Bedienung und Konzepte}
+
+\frame{\sectionpage}
+
 \begin{frame}
-  \frametitle{Questions}
-  \large{Any questions?}
+  \frametitle{Bedienkonzepte}
+  \begin{columns}
+    \column[c]{.33\textwidth}
+      \includegraphics[width=\textwidth]{images/unity-launcher}
+    \column[c]{.33\textwidth}
+      \includegraphics[width=\textwidth]{images/wlan}
+    \column[c]{.33\textwidth}
+      \includegraphics[width=\textwidth]{images/appswitcher}
+  \end{columns}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Scopes}
+  \begin{columns}
+    \column[c]{.50\textwidth}
+      \includegraphics[width=0.7\textwidth]{images/scope}
+    \column[c]{.50\textwidth}
+      \includegraphics[width=0.7\textwidth]{images/applauncher}
+  \end{columns}
+\end{frame}
+
+\section{Geräte und Märkte}
+
+\frame{\sectionpage}
+
+\begin{frame}
+  \frametitle{bq Aquaris E4.5}
+  \begin{columns}
+    \column[c]{.50\textwidth}
+      \begin{itemize}
+        \item 4,5" mit 540 x 960
+        \item MediaTek Quad Core Cortex A7 bis 1,3 GHz
+        \item 8GB interner Speicher + micro SD Slot (max 32GB)
+        \item 1GB RAM
+        \item 2x micro-SIM
+        \item Preis: 170€
+      \end{itemize}
+    \column[c]{.50\textwidth}
+      \includegraphics[width=0.8\textwidth]{images/ubuntuphone}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{bq Aquaris E5}
+  \begin{columns}
+    \column[c]{.50\textwidth}
+      \begin{itemize}
+        \item 5" mit 720 x 1280
+        \item MediaTek Quad Core Cortex A7 bis 1,3 GHz
+        \item 16GB interner Speicher + micro SD Slot (max 32GB)
+        \item 1GB RAM
+        \item 2x micro-SIM
+        \item Preis: 200€
+      \end{itemize}
+    \column[c]{.50\textwidth}
+      \includegraphics[width=0.8\textwidth]{images/e5}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Meizu MX4}
+  \begin{columns}
+    \column[c]{.50\textwidth}
+      \begin{itemize}
+        \item 5,4" mit 1920 x 1152
+        \item MediaTek Octa-Core (Big.LITTLE-Architektur)
+        \item 16GB interne Speicher (keine micro SD!)
+        \item 2GB RAM
+        \item 20,7 Megapixel Kamera
+        \item Preis: 300€
+      \end{itemize}
+    \column[c]{.50\textwidth}
+      \includegraphics[width=0.8\textwidth]{images/meizumx4}
+  \end{columns}
+\end{frame}
+
+\section{System-Aufbau}
+
+\frame{\sectionpage}
+
+\begin{frame}
+  \frametitle{System-Architektur}
+  \includegraphics[width=0.9\textwidth]{images/ubuntu_touch_architecture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{System-Architektur}
+  \includegraphics[width=0.9\textwidth]{images/system-arch2}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was ist drin?}
+  \begin{itemize}
+    \item (fast) der selbe Kernel
+    \item die selben Platform Services*
+    \item die selben GNU Tools
+    \item das selbe Paket-Archiv
+    \item die selbe Unity-Shell*
+  \end{itemize}
+
+  * zur Zeit noch nicht das selbe auf Desktop und Phone
+\end{frame}
+
+\begin{frame}
+  \frametitle{Neue Technologien}
+  \begin{itemize}
+    \item Mir
+    \item Click packages (statt deb)
+    \item Application Confinement
+    \item Lifecycle Management
+    \item Image-Basierte Updates (OTA)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{App-Berechtigungen}
+  \begin{itemize}
+    \item keine vollständige Zustimmung bei App-Installation!
+    \item Zugriffsbestätigung wenn man es erstmals nutzt (bspw: GPS)
+    \item Content-Sharing mit dem Content-Hub
+  \end{itemize}
+\end{frame}
+
+\section{App- und Scope Programmierung}
+
+\frame{\sectionpage}
+
+\begin{frame}
+  \frametitle{App-Programmierung}
+  „Native Apps“:
+  \begin{itemize}
+    \item QML
+    \item HTML5
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Scope-Programmierung}
+  \begin{itemize}
+    \item C++
+    \item Go
+    \item JavaScript auf dem Weg
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was ist möglich?}
+  \begin{itemize}
+    \item UI-Toolket für QML und HTML5
+    \item Größenabhängige Layouts
+    \item Webview (Oxide mit Chromium)
+    \item Download Manager
+    \item Content Hub
+    \item U1DB
+    \item Online Accounts
+  \end{itemize}
+\end{frame}
+
+\section{Zukunft - Convergence}
+
+\frame{\sectionpage}
+
+\begin{frame}
+  \frametitle{Convergence}
+  \large{Dein Smartphone ist dein PC!}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Convergence}
+  Idee:
+  \begin{enumerate}
+    \item Maus, Tastatur und Bildschirm an Smartphone anschließen
+    \item wechsel der Apps in den Fenster-Modus
+    \item „normales“ Ubuntu-Desktop genießen
+    \item Phone Apps auf dem Desktop nutzen
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Convergence}
+  Stand:
+  \begin{itemize}
+    \item Fenstermodus beim Anschluss von BT-Maus
+    \item keine Unterstüzung von externen Monitoren
+    \item Unity 8 noch nicht Desktop-Ready
+    \item erstes „Convergence-Device“ von bq gegen Ende des Jahres
+  \end{itemize}
+\end{frame}
+
+\section{Ende}
+
+\begin{frame}
+  \frametitle{Fragen}
+  \large{Irgendwelche Fragen?}
 \end{frame}
 
 \begin{frame}[c]
@@ -44,7 +240,7 @@
        
         Folien finden sich auf GitHub:
 
-        https://github.com/svijee/snappy-ubuntu-froscon\\[5em]
+        https://github.com/svijee/ubuntu-phone-froscon\\[5em]
 
         \begin{scriptsize}
             Die Folien und Inhalte unterliegen (wenn nicht anders angegegen) der
