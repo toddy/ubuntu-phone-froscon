@@ -13,11 +13,51 @@
 
 \makeatletter
 
-\usetheme{Szeged}
-\usecolortheme{whale}
+% Anpassung des CambridgeUS Beamerthemes mit Ubuntufarben von Eremit7. This work is under the GPL v2.
+% This is Version 1.1 (12. Okt. 2011)
+% This file is made for Xelatex. To compile the packages “texlive-xetex” and „ttf-ubuntu-font-family” must be installed. Then run “xelatex vorlage.tex“ (note the xeLAtex).
+% Make sure that circle_of_friends.pdf is found and beamerouterthemeubuntulines.sty is in the texmf path or the same directory as the .tex file.
+
+% Packages for Xelatex
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{polyglossia}% babel for Xelatex
+\setdefaultlanguage{english}% Set the Language for ployglossia
+
+% Define the Orange from the Ubuntu branding.
+\definecolor{Ubuntu-Orange}{RGB}{221,072,20}
+
+% Load the Theme.
+\usetheme{CambridgeUS}
+
+% I never saw anybody using the navigation symbols, so disable them.
+\setbeamertemplate{navigation symbols}{}
+
+% Substitute the red in the Theme with the predefined Ubuntu-Orange.
+\setbeamercolor{palette primary}{fg=Ubuntu-Orange}
+\setbeamercolor{palette secondary}{fg=Ubuntu-Orange}
+\setbeamercolor{palette tertiary}{bg=Ubuntu-Orange}
+\setbeamercolor{titlelike}{fg=Ubuntu-Orange}
+\setbeamercolor{item}{fg=Ubuntu-Orange}
+\setbeamercolor{block title}{fg=Ubuntu-Orange}
+
+% Now commes the Ubuntu font.
+% Because of beamers shortcomings we need to use a workaround: 
+% This beamer fonttheme uses sansserif for the normal text and 
+% serif fonts for the rest
+\usefonttheme[stillsansseriftext]{serif}
+
+% Now we tell XeLaTex what fonts to use: For the sansserif font Ubuntu Light and as the “serif” font Ubuntu. Ubuntu isn't an serif font, but this way XeLaTex sets all text that was defined as “serif“ in the line above in the Ubuntu font.
+ % Using only the Ubuntu font would result in to heavy text.
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase} % Set the features for every font, the first enables the usual TeX Ligatures (e. g. --- = —) and the second scales the fonts to the same height
+\setsansfont{Ubuntu Light}
+\setmainfont{Ubuntu}
+\setmonofont{DejaVu Sans Mono} % Use this when using a pre-oneiric ubuntu-font-package (Monospaced fonts were added in Oneiric)
+%\setmonofont{Ubuntu Mono}% Works only with lualatex duo to bug: 867853 (in Launchpad)
+
 \titlegraphic{\includegraphics[width=0.2\linewidth]{images/ubuntuphone}}
 \title{Ubuntu Phone}
-\author{Sujeevan Vijayakumaran\\
+\author[Sujeevan Vijayakumaran]{Sujeevan Vijayakumaran\\
 \includegraphics[width=0.3\linewidth]{images/name.png}\\
 \tiny{oder auch: Er, dessen Name nicht genannt wird.}}
 \date{22. August 2015}
@@ -28,6 +68,26 @@
 \begin{frame}
   \frametitle{Inhaltsverzeichnis}
   \tableofcontents
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ich}
+  \begin{itemize}
+    \item aus Castrop-Rauxel
+    \item Software-Entwickler und bald-wieder-Student
+    \item ubuntuusers.de Teammitglied
+    \item kein Canonical-Mitarbeiter
+    \item Ubucon Deutschland \& Ubucon Europe Organisator
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ubucon}
+  \begin{itemize}
+    \item 23.- 25. Oktober in Berlin
+    \item Call for Papers läuft noch!
+    \item Anmeldung ist offen - 15€
+  \end{itemize}
 \end{frame}
 
 \section{Bedienung und Konzepte}
